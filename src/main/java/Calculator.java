@@ -10,7 +10,7 @@ public class Calculator {
             return 0;
         }
 
-        if (text.length() == 1) {
+        if (isLengthOne(text)) {
             return Integer.parseInt(text);
         }
 
@@ -22,8 +22,12 @@ public class Calculator {
         return getIntStream(text).sum();
     }
 
+    private boolean isLengthOne(String text) {
+        return text.length() == 1;
+    }
+
     private IntStream getIntStream(String text) {
-        IntStream tokens = checkIncludeCustomDemeter(text);
+        IntStream tokens = findIncludeCustomDemeter(text);
         if (tokens != null) {
             return tokens;
         }
@@ -31,7 +35,7 @@ public class Calculator {
             .mapToInt(Integer::parseInt);
     }
 
-    private IntStream checkIncludeCustomDemeter(String text) {
+    private IntStream findIncludeCustomDemeter(String text) {
         Matcher matcher = Pattern.compile("//(.)\n(.*)").matcher(text);
         if (matcher.find()) {
             String customDemeter = matcher.group(1);

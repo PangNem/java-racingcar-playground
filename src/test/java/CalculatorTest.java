@@ -48,7 +48,7 @@ public class CalculatorTest {
 
     @Test
     @DisplayName("null 혹은 빈값을 넣을 경우 0을 반환한다")
-    void null_혹은_빈값(String value) {
+    void null_혹은_빈값() {
         int actual = calculator.splitAndSum(null);
         assertThat(actual).isEqualTo(0);
 
