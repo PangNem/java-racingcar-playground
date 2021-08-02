@@ -5,7 +5,7 @@
 - [x] 자동차 이름 리스트 입력 - InputView#inputNames()
     - [x] 쉼표 기준으로 자동차 이름 분리
     - [x] 자동차 객체 생성
-- [ ] 반복할 횟수 입력받기 - InputView#inputTryCount()
+- [x] 반복할 횟수 입력받기 - InputView#inputTryCount()
 - [ ] 자동차 레이싱 시작 - Cars#move()
     - [ ] 1~10 사이 난수를 생성 - NumberGenerator#getRandomNumber()
     - [ ] 4이상의 숫자일 경우 자동차 위치 이동

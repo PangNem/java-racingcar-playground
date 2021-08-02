@@ -16,5 +16,8 @@ public class Application {
         List<Car> cars = Arrays.stream(StringUtils.splitToArray(names))
             .map(Car::new)
             .collect(Collectors.toList());
+
+        int tryCount = inputView.inputTryCount();
+        System.out.println(tryCount);
     }
 }

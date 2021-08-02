@@ -17,4 +17,8 @@ public class Car {
     public boolean isPositionMatch(int position) {
         return this.position.isPositionMatch(position);
     }
+
+    public void print() {
+        System.out.printf("name: %s, position: %s", this.name, this.position);
+    }
 }
