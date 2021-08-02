@@ -1,25 +1,23 @@
 package domain;
 
+
 public class Car {
 
 
-    private final String name;
-    private final int position;
+    private final Name name;
+    private final Position position;
 
     public Car(String name) {
-        this(name, 0);
+
+        this.name = new Name(name);
+        this.position = new Position(0);
     }
 
-    public Car(String name, int position) {
-        this.name = name;
-        this.position = position;
-    }
-
-    public boolean isNameMatch(String carName) {
-        return name.equals(carName);
+    public boolean isNameMatch(String name) {
+        return this.name.isNameMatch(name);
     }
 
     public boolean isPositionMatch(int position) {
-        return this.position == position;
+        return this.position.isPositionMatch(position);
     }
 }
