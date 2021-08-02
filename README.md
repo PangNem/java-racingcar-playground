@@ -1,26 +1,56 @@
-## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)
+## 기능 요구사항에 따른 구현할 기능 목록
 
----
-## 학습 효과를 높이기 위해 추천하는 미션 진행 방법
+- [ ] 이름과 위치를 가진 자동차 클래스 생성 - Car
+    - [ ] 자동차 이름 5자 초과시 에러
+- [ ] 자동차 이름 리스트 입력 - InputView#inputNames()
+    - [ ] 쉼표 기준으로 자동차 이름 분리
+    - [ ] 자동차 객체 생성
+- [ ] 반복할 횟수 입력받기 - InputView#inputTryCount()
+- [ ] 자동차 레이싱 시작 - Cars#move()
+    - [ ] 1~10 사이 난수를 생성 - NumberGenerator#getRandomNumber()
+    - [ ] 4이상의 숫자일 경우 자동차 위치 이동
+- [ ] 레이싱 결과 출력 - ResultView#printResult()
 
----
-1. 피드백 강의 전까지 미션 진행 
-> 피드백 강의 전까지 혼자 힘으로 미션 진행. 미션을 진행하면서 하나의 작업이 끝날 때 마다 add, commit
-> 예를 들어 다음 숫자 야구 게임의 경우 0, 1, 2단계까지 구현을 완료한 후 push
+## 기능 요구사항
 
-![mission baseball](https://raw.githubusercontent.com/next-step/nextstep-docs/master/playground/images/mission_baseball.png)
+- 각 자동차에 이름을 부여할 수 있다. 자동차 이름은 5자를 초과할 수 없다.
+- 전진하는 자동차를 출력할 때 자동차 이름을 같이 출력한다.
+- 자동차 이름은 쉼표(,)를 기준으로 구분한다.
+- 자동차 경주 게임을 완료한 후 누가 우승했는지를 알려준다. 우승자는 한명 이상일 수 있다.
 
----
-2. 피드백 앞 단계까지 미션 구현을 완료한 후 피드백 강의를 학습한다.
-
----
-3. Git 브랜치를 master 또는 main으로 변경한 후 피드백을 반영하기 위한 새로운 브랜치를 생성한 후 처음부터 다시 미션 구현을 도전한다.
+### 실행 결과
 
 ```
-git branch -a // 모든 로컬 브랜치 확인
-git checkout master // 기본 브랜치가 master인 경우
-git checkout main // 기본 브랜치가 main인 경우
+경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).
+pobi,crong,honux
+시도할 회수는 몇회인가요?
+5
 
-git checkout -b 브랜치이름
-ex) git checkout -b apply-feedback
+실행 결과
+pobi : -
+crong : -
+honux : -
+
+pobi : --
+crong : -
+honux : --
+
+pobi : ---
+crong : --
+honux : ---
+
+pobi : ----
+crong : ---
+honux : ----
+
+pobi : -----
+crong : ----
+honux : -----
+
+pobi : -----
+crong : ----
+honux : -----
+
+pobi, honux가 최종 우승했습니다.
 ```
+
