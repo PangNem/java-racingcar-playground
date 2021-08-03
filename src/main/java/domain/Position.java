@@ -2,7 +2,7 @@ package domain;
 
 public class Position {
 
-    private final int position;
+    private int position;
 
     public Position(int position) {
         this.position = position;
@@ -10,5 +10,9 @@ public class Position {
 
     public boolean isPositionMatch(int position) {
         return this.position == position;
+    }
+
+    public void increse() {
+        this.position++;
     }
 }
