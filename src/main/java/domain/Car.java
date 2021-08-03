@@ -21,10 +21,6 @@ public class Car {
         return this.position.isPositionMatch(position);
     }
 
-    public void print() {
-        System.out.printf("name: %s, position: %s", this.name, this.position);
-    }
-
     public void move() {
         if (getRandomInt() > MOVEABLE_VALUE) {
             this.position.increase();
@@ -38,6 +34,10 @@ public class Car {
 
     public int getPosition() {
         return this.position.getPosition();
+    }
+
+    public String getName() {
+        return this.name.getName();
     }
 }
 
@@ -58,6 +58,10 @@ class Name {
 
     public boolean isNameMatch(String name) {
         return this.name.equals(name);
+    }
+
+    public String getName() {
+        return this.name;
     }
 }
 

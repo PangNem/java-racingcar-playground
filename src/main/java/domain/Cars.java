@@ -27,11 +27,8 @@ public class Cars {
             .collect(Collectors.toList());
     }
 
-    public void move(int moveCount) {
-        int startIndex = 0;
-        for (int i = startIndex; i < moveCount; i++) {
-            cars.forEach(Car::move);
-        }
+    public void move() {
+        cars.forEach(Car::move);
     }
 
     private int getMaxPosition() throws IllegalAccessException {
@@ -39,6 +36,10 @@ public class Cars {
             .mapToInt(Car::getPosition)
             .filter(position -> position != Car.START_POSITION)
             .max()
-            .orElseThrow(() -> new IllegalAccessException("아직 경기가 시작되지 않았습니다."));
+            .orElseThrow(() -> new IllegalAccessException("아직 움직인 차가 없습니다"));
+    }
+
+    public List<Car> getCars() {
+        return this.cars;
     }
 }

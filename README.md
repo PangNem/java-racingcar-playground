@@ -9,7 +9,8 @@
 - [x] 우승한 자동차 얻기 - Cars#getWinnerCars()
     - [x] 1~10 사이 난수를 생성 - NumberGenerator#createRandomNumber()
     - [x] 4이상의 숫자일 경우 자동차 위치 이동 Car#move()
-- [ ] 레이싱 결과 출력 - ResultView#printResult()
+- [x] 레이싱 중간 결과 출력 - domain.ResultView#printCurrentCars()
+- [x] 레이싱 최종 결과 출력 - domain.ResultView#printResult()
 
 ## 기능 요구사항
 

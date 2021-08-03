@@ -27,8 +27,7 @@ public class CarsTest {
             cars.getWinnerCars();
         }).isInstanceOf(IllegalAccessException.class);
 
-        int moveCount = 5;
-        cars.move(moveCount);
+        cars.move();
 
         List<Car> winnerCars = cars.getWinnerCars();
         assertThat(winnerCars.size() > 0).isTrue();
