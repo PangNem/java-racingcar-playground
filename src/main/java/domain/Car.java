@@ -2,8 +2,10 @@ package domain;
 
 public class Car {
 
+    private static final int MOVEABLE_VALUE = 4;
+
     private final Name name;
-    private Position position;
+    private final Position position;
 
     public Car(String name) {
         this.name = new Name(name);
@@ -22,11 +24,10 @@ public class Car {
         System.out.printf("name: %s, position: %s", this.name, this.position);
     }
 
-    public Position move() {
-        if (getRandomInt() > 4) {
+    public void move() {
+        if (getRandomInt() > MOVEABLE_VALUE) {
             this.position.increse();
         }
-        return this.position;
     }
 
     protected int getRandomInt() {
