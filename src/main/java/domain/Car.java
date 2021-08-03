@@ -34,6 +34,10 @@ public class Car {
         NumberGenerator numberGenerator = new NumberGenerator();
         return numberGenerator.createRandomNumber();
     }
+
+    public int getPosition() {
+        return this.position.getPosition();
+    }
 }
 
 class Name {
@@ -66,5 +70,9 @@ class Position {
 
     public void increase() {
         this.position++;
+    }
+
+    public int getPosition() {
+        return this.position;
     }
 }
