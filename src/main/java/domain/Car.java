@@ -2,14 +2,15 @@ package domain;
 
 public class Car {
 
-    private static final int MOVEABLE_VALUE = 4;
+    public static final int START_POSITION = 0;
+    public static final int MOVEABLE_VALUE = 4;
 
     private final Name name;
     private final Position position;
 
     public Car(String name) {
         this.name = new Name(name);
-        this.position = new Position(0);
+        this.position = new Position(START_POSITION);
     }
 
     public boolean isMatchName(String name) {
@@ -45,10 +46,14 @@ class Name {
     private final String name;
 
     public Name(String name) {
+        validateName(name);
+        this.name = name;
+    }
+
+    private void validateName(String name) {
         if (name.length() > 5) {
             throw new IllegalArgumentException("최대 자동차 이름을 초과하였습니다.");
         }
-        this.name = name;
     }
 
     public boolean isNameMatch(String name) {

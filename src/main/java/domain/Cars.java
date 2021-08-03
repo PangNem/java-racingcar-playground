@@ -20,32 +20,25 @@ public class Cars {
         return cars.size();
     }
 
-    public List<Car> getWinnerCars(int moveCount) {
-        moveAll(moveCount);
-
+    public List<Car> getWinnerCars() throws IllegalAccessException {
         int maxPosition = getMaxPosition();
         return cars.stream()
             .filter(car -> car.isMatchPosition(maxPosition))
             .collect(Collectors.toList());
     }
 
-    private void moveAll(int moveCount) {
+    public void move(int moveCount) {
         int startIndex = 0;
         for (int i = startIndex; i < moveCount; i++) {
-            move();
+            cars.forEach(Car::move);
         }
     }
 
-    private void move() {
-        for (Car car : cars) {
-            car.move();
-        }
-    }
-
-    private int getMaxPosition() {
+    private int getMaxPosition() throws IllegalAccessException {
         return cars.stream()
             .mapToInt(Car::getPosition)
+            .filter(position -> position != Car.START_POSITION)
             .max()
-            .orElse(0);
+            .orElseThrow(() -> new IllegalAccessException("아직 경기가 시작되지 않았습니다."));
     }
 }

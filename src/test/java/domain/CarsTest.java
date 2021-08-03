@@ -1,6 +1,7 @@
 package domain;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,11 +22,15 @@ public class CarsTest {
     }
 
     @Test
-    void getWinnerCars() {
+    void getWinnerCars() throws IllegalAccessException {
+        assertThatThrownBy(() -> {
+            cars.getWinnerCars();
+        }).isInstanceOf(IllegalAccessException.class);
+
         int moveCount = 5;
+        cars.move(moveCount);
 
-        List<Car> winnerCars = cars.getWinnerCars(moveCount);
-
+        List<Car> winnerCars = cars.getWinnerCars();
         assertThat(winnerCars.size() > 0).isTrue();
     }
 

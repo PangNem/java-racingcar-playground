@@ -1,4 +1,5 @@
 import domain.Car;
+import domain.Cars;
 import domain.InputView;
 import domain.StringUtils;
 import java.util.Arrays;
@@ -19,5 +20,11 @@ public class Application {
 
         int tryCount = inputView.inputTryCount();
         System.out.println(tryCount);
+
+        Cars cars1 = new Cars();
+        for (Car car : cars) {
+            cars1.add(car);
+        }
+
     }
 }
