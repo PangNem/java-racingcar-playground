@@ -26,12 +26,45 @@ public class Car {
 
     public void move() {
         if (getRandomInt() > MOVEABLE_VALUE) {
-            this.position.increse();
+            this.position.increase();
         }
     }
 
     protected int getRandomInt() {
         NumberGenerator numberGenerator = new NumberGenerator();
         return numberGenerator.createRandomNumber();
+    }
+}
+
+class Name {
+
+    private final String name;
+
+    public Name(String name) {
+        if (name.length() > 5) {
+            throw new IllegalArgumentException("최대 자동차 이름을 초과하였습니다.");
+        }
+        this.name = name;
+    }
+
+    public boolean isNameMatch(String name) {
+        return this.name.equals(name);
+    }
+}
+
+class Position {
+
+    private int position;
+
+    public Position(int position) {
+        this.position = position;
+    }
+
+    public boolean isPositionMatch(int position) {
+        return this.position == position;
+    }
+
+    public void increase() {
+        this.position++;
     }
 }
