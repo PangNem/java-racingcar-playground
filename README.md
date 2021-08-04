@@ -1,6 +1,28 @@
 ## 요구사항에 따른 구현할 기능 목록
 
-TODO: 기능 정의
+- [ ] 경주할 자동차 목록 입력받기 - InputView#getCarNames()
+    - [ ] 쉼표(,) 기준으로 이름 분리해서 반환 - StringUtils#split()
+- [ ] 시도할 횟수 입력받기 - InputView#InputTryCount()
+
+
+- [ ] 자동차 객체 생성 - Car
+- [ ] 자동차 이동 - Car#move()
+    - 랜덤 숫자가 4 이상일 경우만 이동
+    - [ ] 랜덤 숫자 생성 - RandomNumberGenerator#generate()
+
+
+- [ ] 경기 시작 - RacingGame#start()
+    - [ ] 경기 상태 STARTED 로 변경
+- [ ] 경기가 끝났는지 체크 - RacingGame#isEnd()
+    - [ ] 경기 상태 상수가 END 인지 체크
+- [ ] 경주 진행 - RacingGame#race()
+    - [ ] 경기 상태가 STARTED 가 아닐 시 에러 발생
+- [ ] 우승한 자동차 목록 얻기 - RacingGame#getWinners()
+    - [ ] 경기 시작 전에 우승자를 구하려고 하면 에러 발생
+
+
+- [ ] 레이싱 중간 결과 출력 - ResultView#printCurrentCars()
+- [ ] 레이싱 최종 결과 출력 - ResultView#printResult()
 
 ## 요구사항
 
