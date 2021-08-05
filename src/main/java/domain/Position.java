@@ -18,6 +18,10 @@ public class Position {
         this.position++;
     }
 
+    public int get() {
+        return this.position;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -35,7 +39,4 @@ public class Position {
         return Objects.hash(position);
     }
 
-    public int get() {
-        return this.position;
-    }
 }

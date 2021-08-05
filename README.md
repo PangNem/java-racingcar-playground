@@ -17,13 +17,13 @@
     - [x] 경기 상태 START 로 변경
 - [x] 우승한 자동차 목록 얻기 - RacingGame#getWinners()
     - [x] 경기 시작 전에 우승자를 구하려고 하면 에러 발생
-- [ ] 경주 진행 - RacingGame#race()
+- [x] 경주 진행 - RacingGame#race()
     - [ ] 경기 상태가 START 가 아닐 시 에러 발생
-- [ ] 경기가 끝났는지 체크 - RacingGame#isEnd()
-    - [ ] 경기 상태 상수가 END 인지 체크
+- [x] 경기가 끝났는지 체크 - RacingGame#isEnd()
+    - [x] 경기 상태 상수가 END 인지 체크
 
-- [ ] 레이싱 중간 결과 출력 - ResultView#printCurrentCars()
-- [ ] 레이싱 최종 결과 출력 - ResultView#printResult()
+- [x] 레이싱 중간 결과 출력 - ResultView#printCurrentCars()
+- [x] 레이싱 최종 결과 출력 - ResultView#printResult()
 
 ## 요구사항
 

@@ -14,21 +14,20 @@ public class RacingGameTest {
 
     @BeforeEach
     void setUp() {
-
         List<Car> cars = Arrays.asList(
             new Car("pobi", 2),
-            new Car("pang", 2),
+            new Car("pang", 3),
             new Car("nem", 3)
         );
         racingGame = new RacingGame(cars);
     }
 
     @Test
-    @DisplayName("우승자를 목록을 구한다")
+    @DisplayName("우승자 목록을 구한다")
     void getWinners() {
         List<String> winners = racingGame.getWinners();
 
-        assertThat(winners).isEqualTo(Arrays.asList("nem"));
+        assertThat(winners).isEqualTo(Arrays.asList("pang", "nem"));
     }
 
     @Test
