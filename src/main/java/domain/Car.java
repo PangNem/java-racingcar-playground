@@ -2,23 +2,23 @@ package domain;
 
 public class Car {
 
-    private final String name;
-    private final int position;
+    private final Name name;
+    private final Position position;
 
     public Car(String name) {
         this(name, 0);
     }
 
     public Car(String name, int position) {
-        this.name = name;
-        this.position = position;
+        this.name = new Name(name);
+        this.position = new Position(position);
     }
 
     public boolean isMatchName(String name) {
-        return this.name.equals(name);
+        return this.name.equals(new Name(name));
     }
 
     public boolean isMatchPosition(int position) {
-        return this.position == position;
+        return this.position.equals(new Position(position));
     }
 }

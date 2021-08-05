@@ -6,6 +6,7 @@
 
 
 - [x] 자동차 객체 생성 - Car
+    - [x] Name 과 Position 으로 문자열과 원시타입 포장
 - [ ] 자동차 이동 - Car#move()
     - 랜덤 숫자가 4 이상일 경우만 이동
     - [ ] 랜덤 숫자 생성 - RandomNumberGenerator#generate()
