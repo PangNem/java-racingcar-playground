@@ -2,6 +2,8 @@ package domain;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+import domain.stratgies.MoveStrategy;
+import domain.stratgies.NonMoveStrategy;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -18,6 +20,9 @@ public class CarTest {
 
         car.move(new MoveStrategy());
         assertThat(car.isMatchPosition(1)).isTrue();
+
+        car.move(() -> 7);
+        assertThat(car.isMatchPosition(2)).isTrue();
     }
 
     @Test
