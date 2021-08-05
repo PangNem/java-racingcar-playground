@@ -2,11 +2,12 @@ package domain;
 
 import java.util.Random;
 
-public class RandomNumberGenerator {
+public class RandomStrategy implements MovingStrategy {
 
     private static final int BOUND = 9;
 
-    public int generate() {
+    @Override
+    public int getNumber() {
         Random random = new Random();
         return random.nextInt(BOUND);
     }

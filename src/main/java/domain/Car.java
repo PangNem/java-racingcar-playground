@@ -2,6 +2,8 @@ package domain;
 
 public class Car {
 
+    private static final int MOVE_BOUND = 4;
+
     private final Name name;
     private final Position position;
 
@@ -20,5 +22,12 @@ public class Car {
 
     public boolean isMatchPosition(int position) {
         return this.position.equals(new Position(position));
+    }
+
+    public void move(MovingStrategy strategy) {
+        int number = strategy.getNumber();
+        if (number > MOVE_BOUND) {
+            this.position.increase();
+        }
     }
 }
