@@ -1,6 +1,6 @@
-import domain.InputView;
+import domain.utils.StringUtils;
+import domain.views.InputView;
 import java.util.List;
-import utils.StringUtils;
 
 public class Application {
 

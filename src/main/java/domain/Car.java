@@ -1,5 +1,7 @@
 package domain;
 
+import domain.stratgies.MovingStrategy;
+
 public class Car {
 
     private static final int MOVE_BOUND = 4;

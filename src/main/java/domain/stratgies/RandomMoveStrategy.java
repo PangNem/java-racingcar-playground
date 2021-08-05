@@ -1,8 +1,8 @@
-package domain;
+package domain.stratgies;
 
 import java.util.Random;
 
-public class RandomStrategy implements MovingStrategy {
+public class RandomMoveStrategy implements MovingStrategy {
 
     private static final int BOUND = 9;
 

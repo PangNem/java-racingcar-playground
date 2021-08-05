@@ -1,4 +1,4 @@
-package domain;
+package domain.stratgies;
 
 public class NonMoveStrategy implements MovingStrategy {
 
