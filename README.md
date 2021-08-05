@@ -1,8 +1,8 @@
 ## 요구사항에 따른 구현할 기능 목록
 
-- [ ] 경주할 자동차 목록 입력받기 - InputView#getCarNames()
-    - [ ] 쉼표(,) 기준으로 이름 분리해서 반환 - StringUtils#split()
-- [ ] 시도할 횟수 입력받기 - InputView#InputTryCount()
+- [ ] 경주할 자동차 목록 입력받기 - domain.InputView#getCarNames()
+    - [x] 쉼표(,) 기준으로 이름 분리해서 반환 - utils.StringUtils#split()
+- [ ] 시도할 횟수 입력받기 - domain.InputView#InputTryCount()
 
 
 - [ ] 자동차 객체 생성 - Car
