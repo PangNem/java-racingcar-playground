@@ -4,10 +4,19 @@ import java.util.Objects;
 
 public class Name {
 
+    private static final int MAX_LENGTH = 5;
+
     private final String name;
 
     public Name(String name) {
+        checkInvalidName(name);
         this.name = name;
+    }
+
+    private void checkInvalidName(String name) {
+        if (name.length() > MAX_LENGTH) {
+            throw new IllegalArgumentException("최대 차 이름 글자를 초과하였습니다.");
+        }
     }
 
     @Override

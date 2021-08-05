@@ -1,11 +1,20 @@
 package domain;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class NameTest {
+
+    @Test
+    @DisplayName("5글자 초과시 에러 발생")
+    void invliad_name() {
+        assertThatThrownBy(() -> {
+            new Name("pangnem");
+        }).isInstanceOf(IllegalArgumentException.class);
+    }
 
     @Test
     @DisplayName("name 객체 생성 테스트")
