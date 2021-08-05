@@ -32,4 +32,16 @@ public class Car {
             this.position.increase();
         }
     }
+
+    public boolean isWinner(int maxPosition) {
+        return this.position.equals(new Position(maxPosition));
+    }
+
+    public String getName() {
+        return this.name.get();
+    }
+
+    public int getPosition() {
+        return this.position.get();
+    }
 }
