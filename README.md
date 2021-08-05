@@ -5,7 +5,7 @@
 - [x] 시도할 횟수 입력받기 - domain.InputView#InputTryCount()
 
 
-- [ ] 자동차 객체 생성 - Car
+- [x] 자동차 객체 생성 - Car
 - [ ] 자동차 이동 - Car#move()
     - 랜덤 숫자가 4 이상일 경우만 이동
     - [ ] 랜덤 숫자 생성 - RandomNumberGenerator#generate()
