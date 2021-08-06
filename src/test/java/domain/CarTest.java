@@ -4,17 +4,23 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 import domain.stratgies.MoveStrategy;
 import domain.stratgies.NonMoveStrategy;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class CarTest {
 
-    @Test
-    @DisplayName("특정 충족 시 차가 이동한다.")
-    void move() {
-        String carName = "pobi";
-        Car car = new Car(carName);
+    private Car car;
 
+    @BeforeEach
+    void setUp() {
+        String carName = "pobi";
+        car = new Car(carName);
+    }
+
+    @Test
+    @DisplayName("특정 조건 충족 시 차가 이동한다.")
+    void move() {
         car.move(new NonMoveStrategy());
         assertThat(car.isMatchPosition(0)).isTrue();
 
@@ -28,10 +34,7 @@ public class CarTest {
     @Test
     @DisplayName("카 객체 생성 성공")
     void create_car_success() {
-        String carName = "pobi";
-        Car car = new Car(carName);
-
-        assertThat(car.isMatchName(carName)).isTrue();
+        assertThat(car.isMatchName("pobi")).isTrue();
         assertThat(car.isMatchPosition(0)).isTrue();
     }
 }

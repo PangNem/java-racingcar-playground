@@ -7,9 +7,12 @@ import java.util.stream.Collectors;
 public class RacingGame {
 
     private final List<Car> cars;
-
+    private final int tryCount;
     private State state;
-    private int tryCount;
+
+    public RacingGame(List<Car> cars) {
+        this(cars, 0);
+    }
 
     public RacingGame(List<Car> cars, int tryCount) {
         this.cars = cars;
@@ -33,9 +36,16 @@ public class RacingGame {
             .collect(Collectors.toList());
     }
 
-    public void race(int raceCount) {
+    public void race() throws IllegalAccessException {
+        checkGameStarted();
         for (Car car : cars) {
             car.move(new RandomMoveStrategy());
+        }
+    }
+
+    private void checkGameStarted() throws IllegalAccessException {
+        if (state == State.NOT_START) {
+            throw new IllegalAccessException("아직 게임이 시작되지 않았습니다.");
         }
     }
 

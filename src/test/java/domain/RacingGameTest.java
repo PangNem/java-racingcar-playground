@@ -1,6 +1,7 @@
 package domain;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,6 +29,14 @@ public class RacingGameTest {
         List<String> winners = racingGame.getWinners();
 
         assertThat(winners).isEqualTo(Arrays.asList("pang", "nem"));
+    }
+
+    @Test
+    @DisplayName("게임 시작 전 경주 시 에러 발생")
+    void not_start_race_throw_error() {
+        assertThatThrownBy(() -> {
+            racingGame.race();
+        }).isInstanceOf(IllegalAccessException.class);
     }
 
     @Test

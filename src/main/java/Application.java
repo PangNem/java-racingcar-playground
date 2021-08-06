@@ -11,10 +11,8 @@ public class Application {
     public static void main(String[] args) {
         String userInputCarNames = InputView.getCarNames();
         List<String> carNames = StringUtils.split(userInputCarNames);
-        System.out.println(carNames);
 
         int tryCount = InputView.getTryCount();
-        System.out.println(tryCount);
 
         List<Car> cars = getCars(carNames);
 
@@ -25,7 +23,7 @@ public class Application {
         while (!racingGame.isEnd()) {
             raceCount++;
 
-            racingGame.race(raceCount);
+            race(racingGame);
             ResultView.printCurrentCars(cars);
 
             racingGame.checkGameEnd(raceCount);
@@ -33,6 +31,14 @@ public class Application {
 
         List<String> winners = racingGame.getWinners();
         ResultView.printResult(winners);
+    }
+
+    private static void race(RacingGame racingGame) {
+        try {
+            racingGame.race();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 
     private static List<Car> getCars(List<String> carNames) {
