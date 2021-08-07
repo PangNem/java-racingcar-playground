@@ -6,10 +6,6 @@ public class Position {
 
     private final int position;
 
-    public Position() {
-        this(0);
-    }
-
     public Position(int position) {
         checkInvalidNumber(position);
         this.position = position;
@@ -22,11 +18,11 @@ public class Position {
     }
 
     public Position increase() {
-        return new Position(this.position + 1);
+        return new Position(position + 1);
     }
 
     public int get() {
-        return this.position;
+        return position;
     }
 
     @Override

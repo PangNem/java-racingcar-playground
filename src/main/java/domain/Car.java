@@ -1,6 +1,6 @@
 package domain;
 
-import domain.stratgies.MovingStrategy;
+import stratgies.MovingStrategy;
 
 public class Car {
 

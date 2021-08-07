@@ -1,10 +1,10 @@
 import domain.Car;
 import domain.RacingGame;
-import domain.utils.StringUtils;
-import domain.views.InputView;
-import domain.views.ResultView;
 import java.util.ArrayList;
 import java.util.List;
+import utils.StringUtils;
+import views.InputView;
+import views.ResultView;
 
 public class Application {
 

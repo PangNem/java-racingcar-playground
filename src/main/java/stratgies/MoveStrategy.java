@@ -1,4 +1,4 @@
-package domain.stratgies;
+package stratgies;
 
 public class MoveStrategy implements MovingStrategy {
 

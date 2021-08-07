@@ -1,6 +1,6 @@
 package domain;
 
-import domain.stratgies.RandomMoveStrategy;
+import stratgies.RandomMoveStrategy;
 import java.util.List;
 import java.util.stream.Collectors;
 

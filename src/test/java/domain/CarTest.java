@@ -2,8 +2,8 @@ package domain;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-import domain.stratgies.MoveStrategy;
-import domain.stratgies.NonMoveStrategy;
+import stratgies.MoveStrategy;
+import stratgies.NonMoveStrategy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
