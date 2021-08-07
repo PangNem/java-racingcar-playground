@@ -44,9 +44,19 @@ public class Application {
     private static List<Car> getCars(List<String> carNames) {
         List<Car> cars = new ArrayList<>();
         for (String carName : carNames) {
-            cars.add(new Car(carName));
+            cars.add(getCar(carName));
         }
         return cars;
+    }
+
+    private static Car getCar(String carName) {
+        Car car = null;
+        try {
+            car = new Car(carName);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+        return car;
     }
 
 }

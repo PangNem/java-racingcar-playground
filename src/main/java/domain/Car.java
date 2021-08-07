@@ -34,7 +34,7 @@ public class Car {
     }
 
     public boolean isWinner(int maxPosition) {
-        return this.position.equals(new Position(maxPosition));
+        return isMatchPosition(maxPosition);
     }
 
     public String getName() {

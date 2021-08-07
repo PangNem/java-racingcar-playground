@@ -31,7 +31,6 @@ public class RacingGameTest {
         assertThat(winners).isEqualTo(Arrays.asList("pang", "nem"));
     }
 
-    @Test
     @DisplayName("게임 시작 전 경주 시 에러 발생")
     void not_start_race_throw_error() {
         assertThatThrownBy(() -> {
