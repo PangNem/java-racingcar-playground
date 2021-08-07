@@ -10,6 +10,7 @@ public class TryCountTest {
     void tryCount() {
         int tryCount = 5;
         TryCount actual = new TryCount(tryCount);
+
         assertThat(actual).isEqualTo(new TryCount(tryCount));
     }
 }

@@ -14,6 +14,9 @@ public class Name {
     }
 
     private void checkInvalidName(String name) {
+        if (name.isEmpty()) {
+            throw new IllegalArgumentException("차 이름이 비었습니다.");
+        }
         if (name.length() > MAX_LENGTH) {
             throw new IllegalArgumentException("최대 차 이름 글자를 초과하였습니다.");
         }

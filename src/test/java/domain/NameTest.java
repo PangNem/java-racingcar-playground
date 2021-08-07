@@ -9,10 +9,14 @@ import org.junit.jupiter.api.Test;
 public class NameTest {
 
     @Test
-    @DisplayName("5글자 초과시 에러 발생")
-    void invliad_name() {
+    @DisplayName("5글자 초과 혹은 빈값 전달 시 에러 발생")
+    void check_invliad_name() {
         assertThatThrownBy(() -> {
             new Name("pangnem");
+        }).isInstanceOf(IllegalArgumentException.class);
+
+        assertThatThrownBy(() -> {
+            new Name("");
         }).isInstanceOf(IllegalArgumentException.class);
     }
 

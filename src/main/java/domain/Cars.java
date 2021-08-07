@@ -32,9 +32,4 @@ public class Cars {
             .max()
             .orElse(0);
     }
-
-    public List<Car> getCars() {
-        return this.cars;
-    }
-
 }

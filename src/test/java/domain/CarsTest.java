@@ -23,7 +23,7 @@ public class CarsTest {
     }
 
     @Test
-    @DisplayName("우승한 자동차 이름 목록을 받는다")
+    @DisplayName("우승한 자동차 목록을 받는다")
     void getWinnerCarsName() {
         assertThat(cars.getWinnerCarsName()).isEqualTo(Arrays.asList("pang", "nem"));
     }

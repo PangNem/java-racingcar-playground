@@ -11,7 +11,14 @@ public class Position {
     }
 
     public Position(int position) {
+        checkInvalidNumber(position);
         this.position = position;
+    }
+
+    private void checkInvalidNumber(int position) {
+        if (position < 0) {
+            throw new IllegalArgumentException("포지션은 음수 값이 허용되지 않습니다.");
+        }
     }
 
     public void increase() {
