@@ -14,7 +14,7 @@ public class Name {
     }
 
     private void checkInvalidName(String name) {
-        if (name.isEmpty()) {
+        if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("차 이름이 비었습니다.");
         }
         if (name.length() > MAX_LENGTH) {
